@@ -1,0 +1,53 @@
+html,
+body {
+  width: 100%;
+}
+body {
+  font-size: 12px;
+  color: #000;
+  font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
+}
+select,
+input,
+textarea,
+button {
+  outline: none;
+}
+ul {
+  display: block;
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+a:link {
+  color: #999;
+}
+a:visited {
+  color: #303133;
+}
+a:hover {
+  color: #409EFF;
+}
+a:active {
+  color: #409EFF;
+}
+.cleanfix:before,
+.cleanfix:after {
+  content: '' !important;
+  display: table !important;
+  clear: both !important;
+}
+.breadcrumb-container {
+  height: 30px;
+  line-height: 30px;
+  margin-bottom: 10px;
+}
+.breadcrumb-container .el-breadcrumb__inner {
+  line-height: 30px;
+}
+.content-wrapper {
+  width: 100%;
+  height: auto;
+}

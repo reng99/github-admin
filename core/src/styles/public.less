@@ -1,0 +1,35 @@
+@import url('./reset.less');
+@import url('./variable.less');
+// #container{
+//     width: 100%;
+//     min-width: 1200px;
+//     overflow: hidden;
+// }
+// some comon code here
+// 清除浮动 cleanfix
+.clean(){
+    &:before,
+    &:after{
+        content: '';
+        display: table;
+        clear: both;
+    }
+}
+.cleanfix {
+    .clean() !important;
+}
+.breadcrumb-container{
+    // background: red;
+    height: 30px;
+    line-height: 30px;
+    margin-bottom: 10px;
+    .el-breadcrumb__inner{
+        line-height: 30px;
+    }
+}
+.content-wrapper{
+    width: 100%;
+    height: auto;
+    // background: blue;
+    // line-height: 20px;
+}
