@@ -48,13 +48,13 @@ export default new Router({
       path: '/',
       name: '',
       component: Home,
-      iconCls: 'el-icon-phone',
+      iconCls: 'el-icon-time',
       leaf: true, // 已经是叶子结点（只有一个节点）
       children: [
         {
-          path: '/second',
-          name: 'Second',
-          component: () => import('@/views/second/Second')
+          path: '/timeline', //  活动时间图
+          name: 'Timeline',
+          component: () => import('@/views/timeline/index')
         }
       ]
     },
