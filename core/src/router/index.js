@@ -32,15 +32,41 @@ export default new Router({
     },
     {
       path: '/',
-      name: 'Chart',
+      name: 'D3',
       component: Home,
       iconCls: 'el-icon-menu',//图标样式class  // element-ui 自带图标查看 http://element.eleme.io/#/zh-CN/component/icon#tu-biao-ji-he
       children: [
         {
-          path: '/d3',
-          name: 'D3',
+          path: '/histogram',
+          name: 'Histogram/直方图',
           meta: '',
-          component: () => import('@/views/charts/d3')
+          component: () => import('@/views/d3/Histogram')
+        },
+        {
+          path: '/line-chart',
+          name: 'LineChart/折线图',
+          meta: '',
+          component: () => import('@/views/d3/LineChart')
+        },
+        {
+          path: '/scatterplot',
+          name: 'scatterplot/散点图',
+          meta: '',
+          component: () => import('@/views/d3/Scatterplot')
+        }
+      ]
+    },
+    {
+      path: '/',
+      name: 'Demo',
+      component: Home,
+      iconCls: 'el-icon-edit',
+      children: [
+        {
+          path: '/demo',
+          name: 'demo',
+          meta: '',
+          component: () => import('@/views/demo/index')
         }
       ]
     },

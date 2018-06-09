@@ -24,9 +24,9 @@
 		<el-col class="main" :span="24">
 			<aside  :class="collapsed?'menu-collapsed':'menu-expanded'">
 				<!-- 导航菜单，未折叠 -->
-				<el-menu router @open="handleopen" @close="handleclose" @select="handleselect" v-if="!collapsed">
+				<el-menu router @open="handleopen" @close="handleclose" @select="handleselect" v-if="!collapsed" unique-opened>
 					<template v-for="(item , index) in $router.options.routes" v-if="!item.hidden">
-						<el-submenu :index="toString(index)" v-if="!item.leaf">
+						<el-submenu :index="index+''" v-if="!item.leaf">
 							<template slot="title"><i :class="item.iconCls"></i>{{item.name}}</template>
 							<el-menu-item v-for="child in item.children" :key="child.path" :index="child.path">{{child.name}}</el-menu-item>
 						</el-submenu>
