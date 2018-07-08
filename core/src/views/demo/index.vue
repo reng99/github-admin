@@ -1,15 +1,32 @@
 <template>
   <div id="d3">
-    <!--直方图-->
+    <!-- 直方图 -->
     <histogram />
+    <hr>
     
-    <!--散布图-->
+    <!-- 散布图 -->
     <scatterplot />
+    <hr>
 
-    <!--折线图-->
+    <!-- 折线图 -->
     <line-chart />
+    <hr>
 
+    <!-- 饼状图 -->
+    <pie />
+    <hr>
 
+    <!-- 范围图 -->
+    <Area />
+    <hr>
+
+    <!-- 缩放图 -->
+    <Zoom />
+    <hr>
+
+    <div class="more">
+      <a href="https://bl.ocks.org/mbostock" target="_blank">更多内容请戳https://bl.ocks.org/mbostock</a>
+    </div>
 
   </div>
 </template>
@@ -19,6 +36,9 @@
   import LineChart from '@/components/demo/LineChart.vue'
   import Histogram from '@/components/demo/Histogram.vue'
   import Scatterplot from '@/components/demo/Scatterplot.vue'
+  import Pie from '@/components/demo/Pie.vue'
+  import Area from '@/components/demo/Area.vue'
+  import Zoom from '@/components/demo/Zoom.vue'
   export default {
     name: 'd3',
     // template:`<div></div>`,
@@ -53,6 +73,9 @@
       LineChart, // 折线图
       Histogram, // 直方图
       Scatterplot, // 散布图
+      Pie, // 饼状图
+      Area, // 范围图
+      Zoom, // 裁剪图
     }
   }
 </script>
@@ -60,6 +83,14 @@
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang='less'>
 #d3 {
-
+  .more a{
+    padding-top: 20px;
+    display: block;
+    text-align: center;
+    color: #409EFF;
+    &:hover{
+      text-decoration: underline;
+    }
+  }
 }
 </style>
